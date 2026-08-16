@@ -1,5 +1,5 @@
 const showDashboard = (req, res) => {
-  res.render("dashboard/view", {
+  res.render("dashboard", {
     user: req.session.user,
   });
 };

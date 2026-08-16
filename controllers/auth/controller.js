@@ -53,7 +53,7 @@ const login = async (req, res) => {
       role: user.role,
     };
 
-    res.redirect("/dashboard/view");
+    res.redirect("/dashboard");
   } catch (error) {
     console.error(error);
     res.status(500).send("Something went wrong.");
