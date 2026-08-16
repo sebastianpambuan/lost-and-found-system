@@ -27,6 +27,6 @@ const authRoutes = require("./routes/auth/route");
 const dashboardRoute = require("./routes/dashboard/route");
 app.use("/", indexRoutes);
 app.use("/", authRoutes);
-app.use("/", dashboardRoute);
+app.use("/dashboard", dashboardRoute);
 
 module.exports = app;
