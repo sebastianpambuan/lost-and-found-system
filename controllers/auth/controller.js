@@ -60,9 +60,21 @@ const login = async (req, res) => {
   }
 };
 
+const logout = (req, res) => {
+    req.session.destroy((error) => {
+        if (error) {
+            console.error(error);
+            return res.status(500).send("Unable to logout.");
+        }
+
+        res.redirect("/login");
+    });
+};
+
 module.exports = {
   showRegister,
   register,
   showLogin,
   login,
+  logout,
 };
