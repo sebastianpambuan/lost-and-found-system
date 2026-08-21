@@ -30,8 +30,15 @@ app.set("view engine", "ejs");
 const indexRoutes = require("./routes/indexRoute");
 const authRoutes = require("./routes/authRoute");
 const dashboardRoute = require("./routes/dashboardRoute");
+const adminRoute = require("./routes/adminRoute");
+const categoryRoute = require("./routes/categoryRoute");
+const lostReportRoute = require("./routes/lostReportRoute");
+
 app.use("/", indexRoutes);
 app.use("/", authRoutes);
 app.use("/", dashboardRoute);
+app.use("/", adminRoute);
+app.use("/", categoryRoute);
+app.use("/", lostReportRoute);
 
 module.exports = app;
