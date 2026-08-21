@@ -27,9 +27,9 @@ app.use(
 app.set("view engine", "ejs");
 
 // routes
-const indexRoutes = require("./routes/index/route");
-const authRoutes = require("./routes/auth/route");
-const dashboardRoute = require("./routes/dashboard/route");
+const indexRoutes = require("./routes/indexRoute");
+const authRoutes = require("./routes/authRoute");
+const dashboardRoute = require("./routes/dashboardRoute");
 app.use("/", indexRoutes);
 app.use("/", authRoutes);
 app.use("/", dashboardRoute);
